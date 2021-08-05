@@ -12,52 +12,46 @@ let computerScoreDisplay = document.querySelector('#computerScore');
 let winnerDisplay = document.querySelector('#winner');
 
 rock.addEventListener('click', function () {
-	if (userScore >= 5 || computerScore >= 5) return;
-	round++;
-  roundResults.textContent = `Round ${round}: ${playRound('rock', computerPlay())}`;
+  if (userScore >= 5 || computerScore >= 5) return;
+  round++;
+  roundResults.textContent = `Round ${round}: ${playRound(
+    'rock',
+    computerPlay()
+  )}`;
   userScoreDisplay.textContent = 'your score: ' + userScore;
   computerScoreDisplay.textContent = 'cpu score: ' + computerScore;
-	checkForWinner();
+  checkForWinner();
 });
 
 paper.addEventListener('click', function () {
   if (userScore >= 5 || computerScore >= 5) return;
-	round++;
-  roundResults.textContent = `Round ${round}: ${playRound('paper', computerPlay())}`;
+  round++;
+  roundResults.textContent = `Round ${round}: ${playRound(
+    'paper',
+    computerPlay()
+  )}`;
   userScoreDisplay.textContent = 'your score: ' + userScore;
   computerScoreDisplay.textContent = 'cpu score: ' + computerScore;
-	checkForWinner();
+  checkForWinner();
 });
 
 scissors.addEventListener('click', function () {
   if (userScore >= 5 || computerScore >= 5) return;
-	round++;
-  roundResults.textContent = `Round ${round}: ${playRound('scissors', computerPlay())}`;
+  round++;
+  roundResults.textContent = `Round ${round}: ${playRound(
+    'scissors',
+    computerPlay()
+  )}`;
   userScoreDisplay.textContent = 'your score: ' + userScore;
   computerScoreDisplay.textContent = 'cpu score: ' + computerScore;
-	checkForWinner();
+  checkForWinner();
 });
-
-function randomNumberGenerator() {
-  return Math.floor(Math.random() * 3);
-}
 
 // randomly returns either rock paper or scissors
 function computerPlay() {
-  let computerDecision;
-  let numericSelection = randomNumberGenerator();
-  switch (numericSelection) {
-    case 0:
-      computerDecision = 'rock';
-      break;
-    case 1:
-      computerDecision = 'paper';
-      break;
-    case 2:
-      computerDecision = 'scissors';
-      break;
-  }
-  return computerDecision;
+  let computerDecision = Math.floor(Math.random() * 3);
+  let selections = ['rock', 'paper', 'scissors'];
+  return selections[computerDecision];
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -97,8 +91,8 @@ function playRound(playerSelection, computerSelection) {
 
 function checkForWinner() {
   if (userScore === 5) {
-    winnerDisplay.textContent = `you won ${userScore}-${computerScore}!`
+    winnerDisplay.textContent = `you won ${userScore}-${computerScore}!`;
   } else if (computerScore === 5) {
-    winnerDisplay.textContent = `you lost ${userScore}-${computerScore}!`
+    winnerDisplay.textContent = `you lost ${userScore}-${computerScore}!`;
   }
 }
