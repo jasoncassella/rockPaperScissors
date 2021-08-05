@@ -2,16 +2,16 @@ let userScore = 0;
 let computerScore = 0;
 let round = 0;
 
-let rock = document.querySelector('#rock');
-let paper = document.querySelector('#paper');
-let scissors = document.querySelector('#scissors');
+const ROCK = document.querySelector('#rock');
+const PAPER = document.querySelector('#paper');
+const SCISSORS = document.querySelector('#scissors');
 
 let roundResults = document.querySelector('#roundResults');
 let userScoreDisplay = document.querySelector('#userScore');
 let computerScoreDisplay = document.querySelector('#computerScore');
 let winnerDisplay = document.querySelector('#winner');
 
-rock.addEventListener('click', function () {
+ROCK.addEventListener('click', function () {
   if (userScore >= 5 || computerScore >= 5) return;
   round++;
   roundResults.textContent = `Round ${round}: ${playRound(
@@ -23,7 +23,7 @@ rock.addEventListener('click', function () {
   checkForWinner();
 });
 
-paper.addEventListener('click', function () {
+PAPER.addEventListener('click', function () {
   if (userScore >= 5 || computerScore >= 5) return;
   round++;
   roundResults.textContent = `Round ${round}: ${playRound(
@@ -35,7 +35,7 @@ paper.addEventListener('click', function () {
   checkForWinner();
 });
 
-scissors.addEventListener('click', function () {
+SCISSORS.addEventListener('click', function () {
   if (userScore >= 5 || computerScore >= 5) return;
   round++;
   roundResults.textContent = `Round ${round}: ${playRound(
