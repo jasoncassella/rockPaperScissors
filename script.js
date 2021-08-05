@@ -1,6 +1,5 @@
 let userScore = 0;
 let computerScore = 0;
-console.log("fake change");
 
 function randomNumberGenerator() {
 	return Math.floor(Math.random() * 3);
@@ -59,14 +58,14 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 	let choice1 = prompt("Rock Paper or Scissors?")
 	console.log(playRound(choice1.toLowerCase(), computerPlay()));
-	let choice2 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice2.toLowerCase(), computerPlay()));
-	let choice3 = prompt('Rock Paper or Scissors?');
-	console.log(playRound(choice3.toLowerCase(), computerPlay()));
-	let choice4 = prompt("Rock Paper or Scissors?")
-	console.log(playRound(choice4.toLowerCase(), computerPlay()));
-	let choice5 = prompt("Rock Paper or Scissors?")
-	console.log(playRound(choice5.toLowerCase(), computerPlay()));
+	// let choice2 = prompt('Rock Paper or Scissors?');
+	// console.log(playRound(choice2.toLowerCase(), computerPlay()));
+	// let choice3 = prompt('Rock Paper or Scissors?');
+	// console.log(playRound(choice3.toLowerCase(), computerPlay()));
+	// let choice4 = prompt("Rock Paper or Scissors?")
+	// console.log(playRound(choice4.toLowerCase(), computerPlay()));
+	// let choice5 = prompt("Rock Paper or Scissors?")
+	// console.log(playRound(choice5.toLowerCase(), computerPlay()));
 
 	if (userScore > computerScore) {
 		console.log("you won :)");
