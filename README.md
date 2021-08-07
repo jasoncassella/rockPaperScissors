@@ -1,3 +1,5 @@
-made a rock paper scissors game
+# rock paper scissors
 
-you can check it out [here](https://jasoncassella.github.io/rockPaperScissors/)
+rock paper scissors game created with HTML, CSS and JS.
+
+[live demo](https://jasoncassella.github.io/rockPaperScissors/)
